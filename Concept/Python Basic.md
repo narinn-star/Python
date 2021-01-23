@@ -103,7 +103,87 @@
 
 5. 딕셔너리
 
+   + How to
+
+     + {Key1:Value1, Key2:Value2, Key3:Value3, ...}
+
+   + Add & Delete
+
+     + \>>> a = {1: 'a'}
+
+       \>>> a[2] = 'b'
+
+       \>>> a
+
+       {1: 'a', 2: 'b'}
+
+       > 딕셔너리 a에 Key와 Value가 각각 2와 'b'인 딕셔너리 쌍 추가
+
+     + \>>> del a[1]
+
+       \>>> a
+
+       {2 : 'b'}
+
+       > 딕셔너리 a에 지정한 Key에 해당하는 {key : value} 쌍 삭제
+
+   + Caution
+
+     + 동일한 Key 존재 X
+
+     + Key에 리스트 X
+
+       단, Value에는 어떤 값이든 상관 없음
+
+   + Functions
+
+     + .keys (Key 리스트) / .values (Value 리스트) / .items (Key, Value 쌍) / .clear (모두 지우기) / .get (Key로 Value 얻기) / .in (Key 존재여부)
+
 6. 집합
+
+   + How to
+
+     + \>>> s1 = set([1,2,3])
+
+       \>>> s1
+
+       {1, 2, 3}
+
+     > ※ 중복 허용 X , 순서 X
+
+   + Type
+
+     ​	\>>> s1 = set ([1, 2, 3, 4, 5, 6])
+
+     ​	\>>> s2 = set ([4, 5, 6, 7, 8, 9])
+
+     + 교집합 (Intersection)
+
+       1) s1 & s2
+
+       2) s1.intersection(s2)
+
+       => {4, 5, 6}
+
+     + 합집합 (Union)
+
+       1) s1 | s2
+
+       2) s1.union(s2)
+
+       => {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+     + 차집합 (Difference)
+
+       1) s1 - s2
+
+       2) s1.difference(s2)
+
+       => {8, 9, 7}
+
+   + Functions
+
+     + .add (값 1개 추가) / .update (값 여러개 추가) / .remove (특정 값 제거)
 
 7. 불
 
