@@ -187,6 +187,26 @@
 
 7. 불
 
+   + How to
+
+     + True / False 
+
+       > true / false ☞ X
+
+   + T or F  in Data Type
+
+     + "data" : True / "" : False / [1, 2, 3] : True / [], (), & {} : False / 
+
+       1 : True / 0 : False / None : False
+
 8. 변수
 
- 
+   + How to
+
+     + assignment sign (=)
+
+       > 스스로 판단 후 자료형 지정
+
+   + Copy (List)
+     + Using : (colon)
+     + Using copy module
