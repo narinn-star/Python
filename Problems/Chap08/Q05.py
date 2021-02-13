@@ -1,4 +1,4 @@
-#피보나치 함수
+#피보나치 함수 *
 number = input("숫자 입력 : ")
 n = int(number)
 print(n)
