@@ -9,10 +9,13 @@ numNo = answers.count('N')
 print(numNo)
 
 #2-19(c)
-#percentYes = 
+percentYes = (numYes/len(answers)) * 100
+print(percentYes)
 
 #2-19(d)
 answers.sort()
 print(answers)
 
 #2-19(e)
+f = answers[6]
+print(f)

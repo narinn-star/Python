@@ -1,4 +1,4 @@
 #2-20
 s = "cat"
 
-print("".join(reversed(s)))
+print(s[::-1])
