@@ -1,9 +1,13 @@
 def arithmetic(lst):
-    lst = list(input("lists >> "))
-    for i in range(len(lst)):
-        if lst[i] % lst[0] == 0:
-            print(True)
-        else:
-            print(False)
+    lst = list(map(int,input("lists >> ").split()))
+    if len(lst) < 2:
+        return True
 
-arithmetic([])
+    d = lst[1]-lst[0]
+    
+    for i in range(1,len(lst)-1):
+        if lst[i+1] - lst[i] != d:
+            return False
+    return True
+
+print(arithmetic([]))
