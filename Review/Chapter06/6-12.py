@@ -1,0 +1,2 @@
+
+def letter2number():
