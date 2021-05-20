@@ -1,4 +1,4 @@
-from random import shuffle
+import random
 
 class Card:
     def __init__(self, rank, suit):
@@ -18,15 +18,13 @@ class Deck:
     suits = {'\u2660', '\u2661', '\u2662', '\u2663'}
 
     def __init__(self, cardList = None):
-        if cardList != None:
-            self.deck = cardList
-
+        self.cards = list()
         for suit in Deck.suits:
             for rank in Deck.ranks:
-                self.deck.append(Card(rank, suit))
+                self.cards.append(Card(rank, suit))
 
     def dealCard(self):
-        return self.deck.pop()
+        return self.cards.pop(0)
     
     def shuffle(self):
-        shuffle(self.deck)
+        random.shuffle(self.cards)
