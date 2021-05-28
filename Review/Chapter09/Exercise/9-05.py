@@ -1,9 +1,6 @@
 from tkinter import*
 from time import strftime, strptime
-
-
-top = Tk()
-
+from tkinter.messagebox import showinfo
 
 def compute():
     global dateEnt
@@ -12,25 +9,23 @@ def compute():
 
     weekday = strftime('%A', strptime(date, '%b %d, %Y'))
 
-    dateEnt.insert(0, weekday + ' ')
+    showinfo(message='{} was a {}'.format(date, weekday))
 
-
-def clear():
-    global dateEnt
     dateEnt.delete(0, END)
 
+def compute2(event):
+    compute()
+
+top = Tk()
 
 label = Label(top, text='Enter date')
 label.grid(row=0, column=0)
 
 dateEnt = Entry(top)
+dateEnt.bind('<Return>', compute2)
 dateEnt.grid(row=0, column=1)
 
-button = Button(top, text='Enter', command=compute)
-button.grid(row=1, column=0)
-
-clearb = Button(top, text='Clear', command=clear)
-clearb.grid(row=1, column=1)
-
+button = Button(top, text='Enter date', command=compute)
+button.grid(row=1, column=0, columnspan=2)
 
 top.mainloop()
