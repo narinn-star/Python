@@ -9,10 +9,10 @@ class Animal:
         print('I am a {} and I {}.'.format(self.spec, self.lang))
     
     def setAge(self, age):
-        self.a = age
+        self.age = age
 
     def getAge(self):
-        return self.a
+        return self.age
     
 flipper = Animal()
 flipper.setSpecies('dolphin')
